@@ -236,7 +236,7 @@ def get_numbered_list(blocks):
         origin.append(line["origin"])
 
       elif text!='':
-        if line["page_no"] == page_no and ((math.floor((origin[-1][1])) == math.floor(line["origin"][1])) or (math.floor(o[0]) == math.floor(line["origin"][0])) or (math.floor(o[1]) == math.floor(line["origin"][1]))or ((math.floor(o[0]) - 20<= math.floor(line["origin"][0]))and (math.floor(o[1]) + 20>= math.floor(line["origin"][1])))):
+        if line["page_no"] == page_no and ((math.floor((origin[-1][1])) == math.floor(line["origin"][1])) or (math.floor(o[0]) == math.floor(line["origin"][0])) or (math.floor(o[1]) == math.floor(line["origin"][1]))or ((math.floor(o[0]) + 10<= math.floor(line["origin"][0]))and (math.floor(o[0]) + 20>= math.floor(line["origin"][0])) and ( math.floor(origin[-1][1]) + 20>= math.floor(line["origin"][1])))):
 
             origin.append(line["origin"])
             o = origin[1]
