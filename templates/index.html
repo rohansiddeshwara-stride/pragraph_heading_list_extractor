@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Extraction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>PDF Address Extraction</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".pdf" required>
+        <button type="submit">Upload and Extract Addresses</button>
+    </form>
+    <div id="addresses">
+        <!-- Display extracted addresses here as JSON -->
+    </div>
+    <script>
+        // JavaScript code to handle the JSON response and display it
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            fetch('/', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                const addressesDiv = document.getElementById('addresses');
+                addressesDiv.innerHTML = JSON.stringify(data, null, 2);
+            });
+        });
+    </script>
+</body>
+</html>
