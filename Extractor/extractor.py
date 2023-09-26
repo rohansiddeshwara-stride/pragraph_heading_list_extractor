@@ -1,7 +1,7 @@
 import fitz
 
-from helpers import drop_tables, get_blocks,get_paras_headings
-from helpers import get_bullets, get_numbered_list, postprocessing, get_json
+from Extractor.helpers import drop_tables, get_blocks,get_paras_headings
+from Extractor.helpers import get_bullets, get_numbered_list, postprocessing, get_json
 
 def extract_para_head_bullet_num(doc_path):
     doc_path = doc_path
@@ -28,6 +28,3 @@ def extract_para_head_bullet_num(doc_path):
 
 
 
-doc_path = "New-York-Resume-Template-Creative.pdf"
-block = extract_para_head_bullet_num(doc_path)
-print(block)
