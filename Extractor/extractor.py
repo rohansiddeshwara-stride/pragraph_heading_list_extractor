@@ -1,3 +1,8 @@
+import fitz
+
+from Extractor.helpers import drop_tables, get_blocks,get_paras_headings
+from Extractor.helpers import get_bullets, get_numbered_list, postprocessing, get_json, combine_structurally
+
 def extract_para_head_bullet_num(doc_path):
   doc_path = doc_path
   doc = fitz.open(doc_path)
