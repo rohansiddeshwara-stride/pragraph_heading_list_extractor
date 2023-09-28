@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: pragraph-bullet-headdings-extractor-app
+Version: 0.0.1
+Summary: A Flask web application for extracting heading, pragraph, bullet list and numbred list from PDF files.

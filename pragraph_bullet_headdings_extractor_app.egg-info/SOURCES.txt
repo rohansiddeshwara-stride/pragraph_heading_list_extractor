@@ -1,0 +1,9 @@
+README.md
+setup.py
+Extractor/__init__.py
+Extractor/extractor.py
+Extractor/helpers.py
+pragraph_bullet_headdings_extractor_app.egg-info/PKG-INFO
+pragraph_bullet_headdings_extractor_app.egg-info/SOURCES.txt
+pragraph_bullet_headdings_extractor_app.egg-info/dependency_links.txt
+pragraph_bullet_headdings_extractor_app.egg-info/top_level.txt
