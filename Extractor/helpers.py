@@ -564,3 +564,28 @@ def get_json(headings, paras, bullets, nums):
     print("Exception while cretaing final json", e)
 
   return final_list
+
+def filter_tables_from_other_entities(table_list, target_list):
+
+  '''
+  this function takes
+  Input :
+  Output :
+  '''
+
+  non_target = []
+  # print(target_list)
+
+  for each_target in target_list:
+    for each_table in table_list:
+      print("1", each_target["text"])
+      if each_target["page_no"] in each_table["page_no"]:
+        print("2", each_target["text"])
+        index = each_table["page_no"].index(each_target["page_no"])
+
+        if do_bboxes_overlap(each_target["bbox"], each_table["bbox"][index]):
+          non_target.append(each_target)
+
+  filtered_list = [item for item in target_list if item not in non_target]
+
+  return filtered_list
